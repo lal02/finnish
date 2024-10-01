@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="header">
+    <h1>Finnish Verb Conjugation</h1>
+</div>
+<div class ="verbInput">
+    <h4>Enter Finnish verb to conjugate</h4>
+    <p></p>
+    <input id="verbInput" required title="Enter Verb">
+    <p></p>
+    <button id="generateButton">generate</button>
+</div>
+<div id = "tableDiv">
+    <h4>Result Table</h4>
+    <p></p>
+    <!-- Table for results -->
+        <table id = "verbTable">
+            <tr>
+                <td>Person</td>
+                <td>Pronom</td>
+                <td>Verb</td>
+            </tr>
+            <tr>
+                <td>1. Person Singular</td>
+                <td>minä</td>
+                <td id="1pS"></td>
+            </tr>
+            <tr>
+                <td>2. Person Singular</td>
+                <td>sinä</td>
+                <td id="2pS"></td>
+            </tr>
+            <tr>
+                <td>3. Person Singular</td>
+                <td>hän</td>
+                <td id="3pS"></td>
+            </tr>
+            <tr>
+                <td>1. Person Plural</td>
+                <td>me</td>
+                <td id="1pP"></td>
+            </tr>
+            <tr>
+                <td>2. Person Plural</td>
+                <td>te</td>
+                <td id="2pP"></td>
+            </tr>
+            <tr>
+                <td>3. Person Plural</td>
+                <td>he</td>
+                <td id="3pP"></td>
+            </tr>
+        </table>
+</div>
+<!--
+<footer class ="footer">
+    <p>Author: Lukas Albrecht</p>
+    <p>Software Engineer, Studying B.Sc. Computer Science</p>
+    <p> .</p>
+    <p> .</p>
+    <p>,</p>
+    <p> ,</p>
+    <p> ,</p>
+    <p>t</p>
+</footer>
+-->
+</body>
+<script src=main.js></script>
+<link rel="stylesheet" href="stylesheet.css">
+</html>
