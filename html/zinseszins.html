@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Finanzrechner Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<h1>Zinsrechner</h1>
+<h3>Zur Berechnung der Rendite bei 1 Jahr Laufzeit</h3>
+<div>
+    Angelegtes Geld in € <input type="number" id="zinsAnlage"/>
+    Erwartete Rendite in % p.a. <input type="number" id="zinsRendite"/>
+    <button type="button" onclick="zinsRenditeBerechnen()">Berechnen!</button>
+    <label id ="zinsErgebnisLabel">Ergebnis: </label>
+</div>
+<h1>Zinseszinsrechner</h1>
+<h3>Zur Berechnung des Endkapitals bei thesaurierendem Anlegen der jährlichen Rendite</h3>
+<div>
+    Angelegtes Geld in € <input type="number" id="zinsesZinsAnlage"/>
+    Erwartete Rendite in % p.a. <input type="number" id="zinsesZinsRendite"/>
+    Anlagedauer in Jahre <input type="number" id="anlageDauer"/>
+    Monatliche Sparquote in € <input type="number" id="monatlicheSparsumme"/>
+    <button type="button" onclick="zinsesZinsRenditeBerechnen()">Berechnen!</button>
+    <label id="gesamtEinzahlung"></label>
+    <label id ="zinsesZinsErgebnisLabel"></label>
+    <label id ="Gesamtvermoegen"></label>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>

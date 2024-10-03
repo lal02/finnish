@@ -7,6 +7,8 @@
 
 const inputId = document.getElementById("verbInput");
 const generateButton = document.getElementById("generateButton");
+const currencyConverterButtonHref = document.getElementById("currencyConverterButtonHref");
+const zinseszinsButton = document.getElementById("zinsesZinsRechner");
 
 //table
 //const table = document.getElementById("verbTable");
@@ -17,6 +19,14 @@ const thirdPersonSingular = document.getElementById("3pS");
 const firstPersonPlural = document.getElementById("1pP");
 const secondPersonPlural = document.getElementById("2pP");
 const thirdPersonPlural = document.getElementById("3pP");
+
+zinseszinsButton.onclick = function (){
+    window.location = "zinseszins.html";
+}
+
+currencyConverterButtonHref.onclick = function () {
+    window.location = "currencyConverter.html";
+}
 
 generateButton.onclick = function (){
     generateVerbConjugation(inputId.value);
@@ -53,35 +63,69 @@ function generateVerbConjugation(verb){
     else if(verb.at(-2) === 'd' &&( verb.at(-1) === 'a' || verb.at(-1) === 'ä')){
         console.log("verb type 2");
         console.log("minä " + verb.substring(0,verblength-2) + "n");
+        firstPersonSingular.textContent =  verb.substring(0,verblength-2) + "n";
+
         console.log("sinä " + verb.substring(0,verblength-2) + "t");
+        secondPersonSingular.textContent =  verb.substring(0,verblength-2) + "t";
+
         console.log("hän " + verb.substring(0,verblength-2));
+        thirdPersonSingular.textContent =  verb.substring(0,verblength-2);
+
         console.log("me " + verb.substring(0,verblength-2) + "mme");
+        firstPersonPlural.textContent =  verb.substring(0,verblength-2) + "mme";
+
         console.log("te " + verb.substring(0,verblength-2) + "tte");
+        secondPersonPlural.textContent =  verb.substring(0,verblength-2) + "tte";
+
         console.log("he " + verb.substring(0,verblength-2) + "vat");
+        thirdPersonPlural.textContent =  verb.substring(0,verblength-2) + "vat";
     }
     //verb type 3
     else if(!isVocal(verb.at(-3))&&!isVocal(verb.at(-2)) && (verb.at(-1) === 'a' || verb.at(-1) === 'ä' ) ){
         console.log("verb type 3");
         console.log("minä " + verb.substring(0,verblength-2) + "en");
+        firstPersonSingular.textContent =  verb.substring(0,verblength-2) + "en";
+
         console.log("sinä " + verb.substring(0,verblength-2) + "et");
+        secondPersonSingular.textContent =  verb.substring(0,verblength-2) + "et";
+
         console.log("hän " + verb.substring(0,verblength-2) + "ee");
+        thirdPersonSingular.textContent =  verb.substring(0,verblength-2) + "ee";
+
         console.log("me " + verb.substring(0,verblength-2) + "emme");
+        firstPersonPlural.textContent =  verb.substring(0,verblength-2) + "emme";
+
         console.log("te " + verb.substring(0,verblength-2) + "ette");
+        secondPersonPlural.textContent =  verb.substring(0,verblength-2) + "ette";
+
         console.log("he " + verb.substring(0,verblength-2) + "evat");
+        thirdPersonPlural.textContent =  verb.substring(0,verblength-2) + "evat";
     }
     //verb type 4
     else if(isVT4(verb.substring(verblength-3,verblength))){
+        console.log("verb type 4");
         console.log("minä " + verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "n");
+        firstPersonSingular.textContent =  verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "n";
+
         console.log("sinä " + verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "t");
+        secondPersonSingular.textContent = verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "t";
+
         if((verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength)).endsWith("aa")){
             console.log("hän " + verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength));
+            thirdPersonSingular.textContent = verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength);
         }
         else{
             console.log("hän " + verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "a");
+            thirdPersonSingular.textContent = verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "a";
         }
         console.log("me " + verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "mme");
+        firstPersonPlural.textContent = verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "mme";
+
         console.log("te " + verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "tte");
+        secondPersonPlural.textContent = verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "tte";
+
         console.log("he " + verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "vat");
+        thirdPersonPlural.textContent = verb.substring(0,verblength-2)+ verb.substring(verblength-1,verblength) + "vat";
     }
     // verb type 5
     else if(isVT5(verb.substring(verblength-3,verblength))){
@@ -89,11 +133,22 @@ function generateVerbConjugation(verb){
         let stem = verb.substring(0,verblength-2);
         let word = stem + "tse";
         console.log("minä " + word + "n");
+        firstPersonSingular.textContent = word + "n";
+
         console.log("sinä " + word + "t");
+        secondPersonSingular.textContent = word + "t";
+
         console.log("hän " + word + "e");
+        thirdPersonSingular.textContent = word + "e";
+
         console.log("me " + word + "mme");
+        firstPersonPlural.textContent = word + "mme";
+
         console.log("te " + word + "tte");
+        secondPersonPlural.textContent = word + "tte";
+
         console.log("he " + word + "vat");
+        thirdPersonPlural.textContent = word + "vat";
     }
     //verb type 6
     else if(isVT6(verb.substring(verblength-3,verblength))){
@@ -101,11 +156,22 @@ function generateVerbConjugation(verb){
         let stem = verb.substring(0,verblength-2);
         let word = stem + "ne";
         console.log("minä " + word + "n");
+        firstPersonSingular.textContent = word + "n";
+
         console.log("sinä " + word + "t");
+        secondPersonSingular.textContent = word + "t";
+
         console.log("hän " + word + "e");
+        thirdPersonSingular.textContent = word + "e";
+
         console.log("me " + word + "mme");
+        firstPersonPlural.textContent = word + "mme";
+
         console.log("te " + word + "tte");
+        secondPersonPlural.textContent = word + "tte";
+
         console.log("he " + word + "vat");
+        thirdPersonPlural.textContent = word + "vat";
     }
 }
 

@@ -1,0 +1,23 @@
+body{
+    background-image: linear-gradient(to bottom,deepskyblue,darkgrey,black);
+    height: 100vh;
+}
+
+
+div {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 10px; /* Abstand zwischen den flexiblen Elementen */
+    border-radius:10px;
+    border-color: black;
+    border-style: solid;
+    padding: 40px;
+}
+h3{
+    max-width:500px;
+}
+
+
+
+

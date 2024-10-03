@@ -1,0 +1,90 @@
+/*background: radial-gradient(#002F6C 10%, white);
+background-image:   url(img.png);
+background-repeat: no-repeat;
+
+background-position:center;*/
+body {
+    background-image: url("../finland_flag.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+td{
+    border: solid black 1px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-color:rgb(211, 211, 211,0.5);
+
+}
+table{
+    border: solid black 1px;
+    align-content: center;
+    margin: auto;
+}
+#tableDiv{
+    display:none;
+    align-content: center;
+    text-align: center;
+
+    padding-bottom: 15px;
+}
+.header{
+    padding:0px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    border-bottom: 1px solid;
+    border-color: black;
+}
+.verbInput{
+    align-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.footer{
+    text-align: center;
+    font-size: 10px;
+    border-top: 1px solid black;
+    padding-top: 10px;
+    align-content: center;
+}
+
+.headerButtonBar{
+    align-content: center;
+    text-align: left;
+}
+
+
+/*
+DROPDOWN BUTTON
+*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownContent {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: column;
+}
+.dropdownContent button {
+    padding: 12px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    border: none;
+    background-color: lightgray;
+    cursor: pointer;
+}
+.dropdown:hover .dropdownContent {
+    display: flex; /* Show the hidden buttons */
+}
+/* Change background color of the dropdown buttons on hover */
+.dropdownContent button:hover {
+    background-color: darkgray;
+}
